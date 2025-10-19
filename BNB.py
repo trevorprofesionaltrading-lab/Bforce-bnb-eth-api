@@ -47,7 +47,7 @@ while True:
     public_key_bytes = bytes.fromhex(str(public_key_hex)[2:])
     bnbadd = keys.PublicKey(public_key_bytes).to_address()			#BNB address
     count+=1
-    blocs = requests.get("https://api.bscscan.com/api?module=account&action=balance&address=" + bnbadd + "&apikey=freekey") #BNB Binance Smart Chain API Must create account to be better API
+    blocs = requests.get("https://api.bscscan.com/api?module=account&action=balance&address=" + bnbadd + "CU3614BR4VZX4IZDN2WV27Q1RWUVZGT25F") #BNB Binance Smart Chain API Must create account to be better API
     ress = blocs.json()
     balance = dict(ress)["result"]
     print ("\n " + colour_cyan + "BNB Binance Smart Chain Random Scan : " + str (count) + colour_red + " : ---Good--Luck--Happy--Hunting--Mizogg.co.uk---" + colour_cyan + "With Balance Checker" + colour_reset) # Running Display Output
@@ -59,4 +59,5 @@ while True:
         f.write('\nPrivateKey (hex): ' + myhex)
         f.write('\n BNB Address: ' + bnbadd)
         f.write('\n==================================')
+
         f.close()
