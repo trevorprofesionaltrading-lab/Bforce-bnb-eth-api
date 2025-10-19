@@ -16,8 +16,8 @@ cores=2 #CPU Control Set Cores
 
 def seek(r):
     while True:
-        api1="?apiKey=freekey" # Get FREE API KEY from https://ethplorer.io/
-        api2="?apiKey=freekey" # Get FREE API KEY from https://ethplorer.io/
+        api1="EK-o1tA1-DJ85Wdm-jqoL1" # Get FREE API KEY from https://ethplorer.io/
+        api2="EK-najZR-B96DUhy-ywQo3" # Get FREE API KEY from https://ethplorer.io/
         #api3="?apiKey=freekey" # Get FREE API KEY from https://ethplorer.io/
         #api4="?apiKey=freekey" # Get FREE API KEY from https://ethplorer.io/
         #api5="?apiKey=freekey" # Get FREE API KEY from https://ethplorer.io/
@@ -26,9 +26,9 @@ def seek(r):
         #mylist = [str(api1), str(api2), str(api3), str(api4)] # 4 API KEYS
         #mylist = [str(api1), str(api2), str(api3), str(api4), str(api5), str(api6)] # 6 API KEYS
         apikeys=random.choice(mylist)
-        apibnb1= "&apikey=freekey" ## Get FREE API KEY from https://bscscan.com/
-        apibnb2= "&apikey=freekey" ## Get FREE API KEY from https://bscscan.com/
-        apibnb3= "&apikey=freekey" ## Get FREE API KEY from https://bscscan.com/
+        apibnb1= "ZQMB649HGDN5FR178RZN8AN4FDD8JSA4JC" ## Get FREE API KEY from https://bscscan.com/
+        apibnb2= "EP86PF9Q5YNXUP9G1RXB8P2IWTQ2YQ3JJ3" ## Get FREE API KEY from https://bscscan.com/
+        apibnb3= "CU3614BR4VZX4IZDN2WV27Q1RWUVZGT25F" ## Get FREE API KEY from https://bscscan.com/
         #apibnb4= "&apikey=freekey" ## Get FREE API KEY from https://bscscan.com/
         #apibnb5= "&apikey=freekey" ## Get FREE API KEY from https://bscscan.com
         #apibnb6= "&apikey=freekey" ## Get FREE API KEY from https://bscscan.com/
@@ -77,4 +77,5 @@ if __name__ == '__main__':
         for r in range(cores):
                 p = multiprocessing.Process(target=seek, args=(r,))
                 jobs.append(p)
+
                 p.start()
